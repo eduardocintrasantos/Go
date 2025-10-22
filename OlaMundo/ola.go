@@ -2,9 +2,16 @@ package main
 
 import "fmt"
 
-func Ola() string {
-	return "Ola, Mundo"
+const palavraOla = "Olá, "
+
+func Ola(nome string) string {
+	if nome != "" {
+		return palavraOla + nome
+	} else {
+		return palavraOla + "mundo"
+	}
+
 }
 func main() {
-	fmt.Println(Ola())
+	fmt.Println(Ola(""))
 }
