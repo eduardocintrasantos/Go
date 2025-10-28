@@ -14,3 +14,12 @@ func TestSoma(t *testing.T) {
 		}
 	})
 }
+
+func SomaTodoOResto(numerosParaSomar ...[]int) []int {
+	var somas []int
+	for _, numeros := range numerosParaSomar {
+		final := numeros[1:]
+		somas = append(somas, Soma(final))
+	}
+	return somas
+}
